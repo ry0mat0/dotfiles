@@ -1,0 +1,109 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+hook_add = '''
+    nnoremap <silent> <Leader>f :<C-u> Defx -listed -resume
+    \ -columns=indent:mark:icons:filename:git:size
+    \ -buffer-name=tab`tabpagenr()`<CR>
+    autocmd FileType defx call s:defx_my_settings()
+
+    " \ -columns=indent:mark:icon:icons:filename:git:size
+    function! s:defx_my_settings() abort
+
+    " open file
+    nnoremap <silent><buffer><expr> l
+    \ defx#do_action('open')
+
+     " move to parent directory
+    nnoremap <silent><buffer><expr> h
+    \ defx#do_action('cd', ['..'])
+
+    " move to home directory
+    nnoremap <silent><buffer><expr> ~
+    \ defx#do_action('cd')
+
+    " change vim directory
+    nnoremap <silent><buffer><expr> cd
+    \ defx#do_action('change_vim_cwd')
+
+   " execute file
+    nnoremap <silent><buffer><expr> x
+    \ defx#do_action('execute_command')
+
+    " create new file
+    nnoremap <silent><buffer><expr> N
+    \ defx#do_action('new_file')
+
+    " create new directory
+    nnoremap <silent><buffer><expr> K
+    \ defx#do_action('new_directory')
+
+    " delete file
+    nnoremap <silent><buffer><expr> d
+    \ defx#do_action('remove')
+
+    " copy file
+    nnoremap <silent><buffer><expr> c
+    \ defx#do_action('copy')
+
+    " paste file
+    nnoremap <silent><buffer><expr> p
+    \ defx#do_action('paste')
+
+    " rename file
+    nnoremap <silent><buffer><expr> r
+    \ defx#do_action('rename')
+
+    " move file
+    nnoremap <silent><buffer><expr> m
+    \ defx#do_action('move')
+
+    " copy path
+    nnoremap <silent><buffer><expr> yy
+    \ defx#do_action('yank_path')
+
+    " toggle show/hide dotfiles
+    nnoremap <silent><buffer><expr> .
+    \ defx#do_action('toggle_ignored_files')
+
+    " toggle open folder
+    nnoremap <silent><buffer><expr> t
+    \ defx#do_action('open_tree', 'toggle')
+
+    " change vim working directory
+    nnoremap <silent><buffer><expr> cd
+    \ defx#do_action('change_vim_cwd')
+
+    " quit defx.vim
+    nnoremap <silent><buffer><expr> <Esc>
+    \ defx#do_action('quit')
+    nnoremap <silent><buffer><expr> q
+    \ defx#do_action('quit')
+
+    endfunction
+'''
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    let g:lightline = { 'colorscheme': 'wombat' }
+    set laststatus=2
+    set noshowmode
+'''
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo= 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
