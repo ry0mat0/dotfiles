@@ -8,11 +8,20 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-" Required:
-set runtimepath+=/Users/rmat/.cache/dein/repos/github.com/Shougo/dein.vim
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+if !isdirectory(s:dein_repo_dir)
+  execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+endif
+execute 'set runtimepath^=' . s:dein_repo_dir
 
 " Required:
-call dein#begin('/Users/rmat/.cache/dein')
+"set runtimepath+=/Users/rmat/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+"call dein#begin('/Users/rmat/.cache/dein')
+call dein#begin(s:dein_dir)
 
 " Let dein manage dein
 " Required:
