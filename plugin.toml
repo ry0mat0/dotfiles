@@ -107,3 +107,6 @@ build = 'make'
 
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
