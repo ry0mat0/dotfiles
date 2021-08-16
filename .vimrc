@@ -51,6 +51,9 @@ endif
 
 " Setting for quickrun
 let g:quickrun_config = {
+    \ 'python': {
+    \   'command': 'python3'
+  \ },
     \ '_' : {
         \ 'runner' : 'vimproc',
         \ 'runner/vimproc/updatetime' : 40,
