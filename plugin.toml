@@ -104,6 +104,7 @@ hook_add = '''
 
     endfunction
 '''
+
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 
