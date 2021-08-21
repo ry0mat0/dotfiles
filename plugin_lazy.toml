@@ -1,14 +1,25 @@
 [[plugins]]
-repo = 'davidhalter/jedi-vim'
-on_ft = 'python'
-
-[[plugins]]
-repo = 'nvie/vim-flake8'
-on_ft = 'python'
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
 hook_add = '''
-    autocmd FileType python map <buffer> <S-f> :call Flake8() <CR>
+    let g:deoplete#enable_at_startup = 1
 '''
 
 [[plugins]]
-repo = 'tell-k/vim-autopep8'
+repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
+
+# [[plugins]]
+# repo = 'davidhalter/jedi-vim'
+# on_ft = 'python'
+#
+# [[plugins]]
+# repo = 'nvie/vim-flake8'
+# on_ft = 'python'
+# hook_add = '''
+#     autocmd FileType python map <buffer> <S-f> :call Flake8() <CR>
+# '''
+#
+# [[plugins]]
+# repo = 'tell-k/vim-autopep8'
+# on_ft = 'python'
