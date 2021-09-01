@@ -15,7 +15,9 @@ alias ls='ls -GF'
 alias ll='ls -la'
 alias la='ls -a'
 alias vi='nvim'
+alias gls='alias | grep git'
 alias g='git'
+alias gd='git diff'
 
 #QuickLook
 alias ql='qlmanage -p "$@" >&/dev/null'
