@@ -122,3 +122,5 @@ set smartcase
 set hlsearch
 "esc連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+"Quit with q
+nnoremap q :q<Return>
