@@ -28,14 +28,14 @@ hook_add = '''
     let g:jedi#completions_command = ""
     let g:jedi#rename_command = "<leader>r"
 '''
-#
-# [[plugins]]
-# repo = 'nvie/vim-flake8'
-# on_ft = 'python'
-# hook_add = '''
-#     autocmd FileType python map <buffer> <S-f> :call Flake8() <CR>
-# '''
-#
-# [[plugins]]
-# repo = 'tell-k/vim-autopep8'
-# on_ft = 'python'
+
+[[plugins]]
+repo = 'nvie/vim-flake8'
+on_ft = 'python'
+hook_add = '''
+    autocmd FileType python map <buffer> <S-f> :call Flake8() <CR>
+'''
+
+[[plugins]]
+repo = 'tell-k/vim-autopep8'
+on_ft = 'python'
