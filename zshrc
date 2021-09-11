@@ -7,8 +7,19 @@ colors
 autoload -U compinit
 compinit
 
-autoload -U promptinit
-promptinit
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle  ':vcs_info:git:*' check-for-changes true #formats 設定項目で %c,%u が使用可
+zstyle  ':vcs_info:git:*' stagedstr "%F{green}!" #commit されていないファイルがある
+zstyle  ':vcs_info:git:*' unstagedstr "%F{magenta}+" #add されていないファイルがある
+zstyle  ':vcs_info:*' formats "%F{cyan}%c%u(%b)%f" #通常
+zstyle  ':vcs_info:*' actionformats '[%b|%a]' #rebase 途中,merge コンフリクト等 formats 外の表示
+precmd () { vcs_info }
+
+#Use default prompt list
+# autoload -U promptinit
+# promptinit
+# prompt adam2
 
 #alias
 alias ls='ls -GF'
@@ -23,8 +34,11 @@ alias gd='git diff'
 alias ql='qlmanage -p "$@" >&/dev/null'
 
 #prompt
-prompt adam2
-
+rprompt='%n@%m'
+prompt='(%F{green}%~%f)${vcs_info_msg_0_}
+>'
+# PROMPT='%F{red}[%n@%m]%f' 
+# PROMPT=$PROMPT'${vcs_info_msg_0_}'
 # Load syntax-highlighting and auto-suggestions (installed by homebrew)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
