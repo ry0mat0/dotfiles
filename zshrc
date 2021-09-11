@@ -30,21 +30,18 @@ alias gls='alias | grep git'
 alias g='git'
 alias gd='git diff'
 
-#QuickLook
-alias ql='qlmanage -p "$@" >&/dev/null'
 
 #prompt
 rprompt='%n@%m'
 prompt='(%F{green}%~%f)${vcs_info_msg_0_}
 >'
-# PROMPT='%F{red}[%n@%m]%f' 
-# PROMPT=$PROMPT'${vcs_info_msg_0_}'
-# Load syntax-highlighting and auto-suggestions (installed by homebrew)
+
+#setting for OSX
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# airdrop share command installed by gem
-alias ad='terminal-share -service airdrop -video'
+alias ad='terminal-share -service airdrop -video' #use AirDrop
+alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
 
 #use python installed by pyenv
 #export PYENV_ROOT="/usr/local/var/pyenv"
