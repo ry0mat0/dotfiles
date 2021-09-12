@@ -28,13 +28,16 @@ alias la='ls -a'
 alias vi='nvim'
 alias gls='alias | grep git'
 alias g='git'
+alias ga='git add'
+alias gst='git status'
 alias gd='git diff'
+alias gcz='git cz c'
 
 
 #prompt
-rprompt='%n@%m'
-prompt='(%F{green}%~%f)${vcs_info_msg_0_}
->'
+# RPROMPT='%n@%m'
+RPROMPT='(%F{green}%~%f)'
+PROMPT='${vcs_info_msg_0_}>'
 
 #setting for OSX
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
