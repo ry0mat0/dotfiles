@@ -69,8 +69,8 @@ let g:quickrun_config = {
 
 let g:quickrun_no_default_key_mappings = 1
 nnoremap <Leader>e :cclose<CR>:write<CR>:QuickRun<CR>
-endif
-"End Setting for plugins (only for neovim)
+
+endif "End Setting for plugins (only for neovim)
 
 " Split window
 nnoremap ss :split<Return><C-w>w
