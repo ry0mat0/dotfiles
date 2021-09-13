@@ -36,8 +36,9 @@ alias gcz='git cz c'
 
 #prompt
 # RPROMPT='%n@%m'
-RPROMPT='(%F{green}%~%f)'
-PROMPT='${vcs_info_msg_0_}>'
+# RPROMPT='(%F{green}%~%f)'
+PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}
+>'
 
 #setting for OSX
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
