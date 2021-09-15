@@ -32,10 +32,8 @@ call dein#begin(s:dein_dir)
 "call dein#add('Shougo/neosnippet-snippets')
 let s:toml_file = expand('~/.cache/userconfig/plugin.toml')
 let s:toml_lazy = expand('~/.cache/userconfig/plugin_lazy.toml')
-let s:toml_test = expand('~/.cache/userconfig/plugin_test.toml')
 call dein#load_toml(s:toml_file, {'lazy':0})
 call dein#load_toml(s:toml_lazy, {'lazy':1})
-call dein#load_toml(s:toml_test, {'lazy':1})
 
 " Required:
 call dein#end()
