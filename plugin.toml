@@ -113,7 +113,7 @@ repo = 'itchyny/lightline.vim'
 hook_add = '''
     let g:lightline = { 'colorscheme': 'wombat' }
     set laststatus=2
-    set noshowmode
+    " set noshowmode
 '''
 
 [[plugins]]
@@ -147,3 +147,8 @@ repo = 'kristijanhusak/defx-git'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+on_source = 'ddc.vim'
+
