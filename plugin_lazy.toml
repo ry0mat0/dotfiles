@@ -1,0 +1,28 @@
+# plugins depend on filetype
+# syntax highlighting for toml
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'vim-skk/eskk.vim'
+on_event = 'InsertEnter' 
+hook_add = '''
+    let g:eskk#directory = '~/.config/eskk'
+    let g:eskk#dictionary = {
+          \ 'path': '~/.config/eskk/skk-jisyo.utf8'
+          \}
+    let g:eskk#large_dictionary = {
+          \ 'path': '~/.config/eskk/SKK-JISYO.L',
+          \}
+    let g:eskk#enable_completion = 0
+    let g:eskk#no_default_mappings = 0
+    let g:eskk#keep_state = 0
+    let g:eskk#egg_like_newline = 1
+    augroup vimrc_eskk
+      autocmd!
+      autocmd User eskk-enable-post lmap <buffer> l <Plug>(eskk:disable)
+      autocmd User eskk-enable-post lmap <buffer> <C-j> <Plug>(eskk:enable)
+      autocmd User eskk-enable-post lmap <buffer> <C-0> <Plug>(eskk:enable)
+    augroup END
+'''
