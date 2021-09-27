@@ -1,25 +1,25 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-    autocmd FileType denite call s:denite_my_settings()
-    function! s:denite_my_settings() abort
-       nnoremap <silent><buffer><expr> <CR>
-       \ denite#do_map('do_action')
-       nnoremap <silent><buffer><expr> d
-       \ denite#do_map('do_action', 'delete')
-       nnoremap <silent><buffer><expr> p
-       \ denite#do_map('do_action', 'preview')
-       nnoremap <silent><buffer><expr> q
-       \ denite#do_map('quit')
-       nnoremap <silent><buffer><expr> i
-       \ denite#do_map('open_filter_buffer')
-       nnoremap <silent><buffer><expr> <Space>
-       \ denite#do_map('toggle_select').'j'
-    endfunction
-'''
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# hook_add = '''
+#     autocmd FileType denite call s:denite_my_settings()
+#     function! s:denite_my_settings() abort
+#        nnoremap <silent><buffer><expr> <CR>
+#        \ denite#do_map('do_action')
+#        nnoremap <silent><buffer><expr> d
+#        \ denite#do_map('do_action', 'delete')
+#        nnoremap <silent><buffer><expr> p
+#        \ denite#do_map('do_action', 'preview')
+#        nnoremap <silent><buffer><expr> q
+#        \ denite#do_map('quit')
+#        nnoremap <silent><buffer><expr> i
+#        \ denite#do_map('open_filter_buffer')
+#        nnoremap <silent><buffer><expr> <Space>
+#        \ denite#do_map('toggle_select').'j'
+#     endfunction
+# '''
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'
@@ -27,11 +27,11 @@ hook_add = '''
     nnoremap <silent> <Leader>f :<C-u> Defx -listed -resume
     \ -columns=indent:mark:icons:filename:git:size
     \ -buffer-name=tab`tabpagenr()`<CR>
+
+    nnoremap <silent> <Leader>w :<C-u> Defx -auto-cd
+    \ <CR>
     autocmd FileType defx call s:defx_my_settings()
-
-    " \ -columns=indent:mark:icon:icons:filename:git:size
     function! s:defx_my_settings() abort
-
     " open file
     nnoremap <silent><buffer><expr> l
     \ defx#do_action('open')
@@ -43,6 +43,11 @@ hook_add = '''
     " move to home directory
     nnoremap <silent><buffer><expr> ~
     \ defx#do_action('cd')
+
+    " move to workspace1
+    let s:work_dir = '/Users/rmat/Documents'
+    nnoremap <buffer><expr> w1
+    \ defx#do_action('cd', s:work_dir)
 
     " change vim directory
     nnoremap <silent><buffer><expr> cd
@@ -59,10 +64,18 @@ hook_add = '''
     " create new directory
     nnoremap <silent><buffer><expr> K
     \ defx#do_action('new_directory')
+    
+    " toggle select
+    nnoremap <silent><buffer><expr> <Space>
+    \ defx#do_action('toggle_select')
 
-    " delete file
+    " toggle select all
+    nnoremap <silent><buffer><expr> *
+    \ defx#do_action('toggle_select_all')
+
+    " delete file to trash
     nnoremap <silent><buffer><expr> d
-    \ defx#do_action('remove')
+    \ defx#do_action('remove_trash')
 
     " copy file
     nnoremap <silent><buffer><expr> c
@@ -92,10 +105,12 @@ hook_add = '''
     nnoremap <silent><buffer><expr> t
     \ defx#do_action('open_tree', 'toggle')
 
-    " change vim working directory
-    nnoremap <silent><buffer><expr> cd
-    \ defx#do_action('change_vim_cwd')
-
+    " preview the file
+    nnoremap <silent><buffer><expr> P
+    \ defx#do_action('preview')
+    " redraw buffer
+    nnoremap <buffer><expr> <C-l>
+    \ defx#do_action('redraw')
     " quit defx.vim
     nnoremap <silent><buffer><expr> <Esc>
     \ defx#do_action('quit')
