@@ -5,6 +5,10 @@ repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
 [[plugins]]
+repo = 'kat0h/bufpreview.vim'
+on_ft = 'markdown'
+
+[[plugins]]
 repo = 'vim-skk/eskk.vim'
 on_event = 'InsertEnter' 
 hook_add = '''
