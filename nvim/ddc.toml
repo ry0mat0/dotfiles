@@ -11,7 +11,7 @@ hook_source = '''
     " <S-TAB> completion back. 
     inoremap <expr><S-TAB>  pumvisible() ? '<C-p>' : '<C-h>'
     " global settings
-    call ddc#custom#patch_global('sources', ['ddc-vim-lsp','around','tmux'])
+    call ddc#custom#patch_global('sources', ['ddc-vim-lsp','around','tmux', 'file'])
     call ddc#custom#patch_global('sourceOptions', {
       \ '_': {
       \       'matchers': ['matcher_head'],
@@ -22,6 +22,11 @@ hook_source = '''
       \       'mark': 'lsp',
       \       'forceCompletionPattern': "\\.|:\\s*|->",
       \                },
+      \ 'file': {
+      \       'mark': 'F',
+      \       'isVolatile': v:true,
+      \       'forceCompletionPattern': '\S/\S*'
+      \         }
       \})
 
     " Change source options
@@ -43,6 +48,10 @@ on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'delphinus/ddc-tmux'
+on_source = 'ddc.vim'
+
+[[plugins]]
+repo = 'LumaKernel/ddc-file'
 on_source = 'ddc.vim'
 
 # ddc-filters
