@@ -33,6 +33,11 @@ if dein#check_install()
 endif
 " END dein Scripts ----------------------
 
+" Tabs
+nmap te :tabedit
+nmap <S-Tab> :tabprev<CR>
+nmap <Tab> :tabnext<CR>
+
 " Split window
 nnoremap ss :split<Return><C-w>w
 nnoremap sv :vsplit<Return><C-w>w
@@ -61,3 +66,19 @@ nnoremap q :q<Return>0
 set clipboard+=unnamedplus
 " add vim-plugin workspace
 set runtimepath^=~/Documents/workspace/myPrugins
+
+"Settings depends on filetypes
+augroup vimrc
+  autocmd!
+  autocmd Filetype * call s:filetype(expand('<amatch>'))
+augroup END
+
+function! s:filetype(ftype) abort
+  if !empty(a:ftype) && exists('*' . 's:filetype_' . a:ftype)
+    execute 'call s:filetype_' . a:ftype . '()'
+  endif
+endfunction
+
+function! s:filetype_tex() abort
+  nnoremap <Leader>t :w<CR>:!./texall.sh<CR>
+endfunction
