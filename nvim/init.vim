@@ -9,16 +9,16 @@ endif
 
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
+let s:toml_dir = expand('~/dotfiles/nvim')
 if !isdirectory(s:dein_repo_dir)
   execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
 endif
 execute 'set runtimepath^=' . s:dein_repo_dir
 call dein#begin(s:dein_dir)
-let s:toml_file = expand('~/dotfiles/nvim/plugin.toml')
-let s:lazy_file = expand('~/dotfiles/nvim/plugin_lazy.toml')
-let s:lsp_file = expand('~/dotfiles/nvim/lsp.toml')
-let s:ddc_file = expand('~/dotfiles/nvim/ddc.toml')
+let s:toml_file = expand(s:toml_dir . '/plugin.toml')
+let s:lazy_file = expand(s:toml_dir . '/plugin_lazy.toml')
+let s:lsp_file = expand(s:toml_dir . '/lsp.toml')
+let s:ddc_file = expand(s:toml_dir . '/ddc.toml')
 call dein#load_toml(s:toml_file, {'lazy':0})
 call dein#load_toml(s:lazy_file, {'lazy':1})
 call dein#load_toml(s:lsp_file, {'lazy':0})
