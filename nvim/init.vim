@@ -23,6 +23,10 @@ call dein#load_toml(s:toml_file, {'lazy':0})
 call dein#load_toml(s:lazy_file, {'lazy':1})
 call dein#load_toml(s:lsp_file, {'lazy':0})
 call dein#load_toml(s:ddc_file, {'lazy':1})
+call dein#add('cocopon/iceberg.vim')
+call dein#add('aereal/vim-colors-japanesque')
+call dein#add('arcticicestudio/nord-vim')
+call dein#add('tyrannicaltoucan/vim-quantum')
 call dein#end()
 
 filetype plugin indent on
@@ -32,6 +36,9 @@ if dein#check_install()
   call dein#install()
 endif
 " END dein Scripts ----------------------
+
+" Color
+colorscheme iceberg
 
 " Tabs
 nmap te :tabedit
@@ -61,7 +68,7 @@ set tabstop=2
 " tab width
 set shiftwidth=2
 " quit with q
-nnoremap q :q<Return>0
+nnoremap q :q
 " yank to clipboard
 set clipboard+=unnamedplus
 " add vim-plugin workspace
