@@ -25,11 +25,12 @@ hook_add = '''
 repo = 'Shougo/defx.nvim'
 hook_add = '''
     nnoremap <silent> <Leader>f :<C-u> Defx -listed -resume
-    \ -columns=indent:mark:icons:filename:git:size
+    \ -columns=indent:mark:icons:git:filename:time:size
     \ -buffer-name=tab`tabpagenr()`<CR>
 
     nnoremap <silent> <Leader>w :<C-u> Defx -auto-cd
     \ <CR>
+
     autocmd FileType defx call s:defx_my_settings()
     function! s:defx_my_settings() abort
     " open file
@@ -97,6 +98,10 @@ hook_add = '''
     nnoremap <silent><buffer><expr> yy
     \ defx#do_action('yank_path')
 
+    " toggle sort
+    nnoremap <buffer><expr> S
+    \ defx#do_action('toggle_sort', 'TIME')
+
     " toggle show/hide dotfiles
     nnoremap <silent><buffer><expr> .
     \ defx#do_action('toggle_ignored_files')
@@ -109,14 +114,13 @@ hook_add = '''
     nnoremap <silent><buffer><expr> P
     \ defx#do_action('preview')
     " redraw buffer
-    nnoremap <buffer><expr> <C-l>
+    nnoremap <buffer><expr> <CR>
     \ defx#do_action('redraw')
     " quit defx.vim
     nnoremap <silent><buffer><expr> <Esc>
     \ defx#do_action('quit')
     nnoremap <silent><buffer><expr> q
     \ defx#do_action('quit')
-
     endfunction
 '''
 
