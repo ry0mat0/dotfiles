@@ -37,25 +37,11 @@ if dein#check_install()
 endif
 " END dein Scripts ----------------------
 
+" maps
+source ~/dotfiles/nvim/map.rc.vim
+
 " Color
 colorscheme iceberg
-
-" Tabs
-nmap te :tabedit
-nmap <S-Tab> :tabprev<CR>
-nmap <Tab> :tabnext<CR>
-
-" Split window
-nnoremap ss :split<Return><C-w>w
-nnoremap sv :vsplit<Return><C-w>w
-" Move window
-nnoremap sh <C-w>h
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
-
-nnoremap j gj
-nnoremap k gk
 
 " Set line number
 set number
@@ -67,8 +53,6 @@ set expandtab
 set tabstop=2
 " tab width
 set shiftwidth=2
-" quit with q
-nnoremap q :q
 " yank to clipboard
 set clipboard+=unnamedplus
 " add vim-plugin workspace
@@ -86,6 +70,7 @@ function! s:filetype(ftype) abort
   endif
 endfunction
 
+" Typeset tex->pdf using texall.sh
 function! s:filetype_tex() abort
   nnoremap <Leader>t :w<CR>:!./texall.sh<CR>
 endfunction
