@@ -6,23 +6,28 @@ inoremap <silent><expr> <TAB>
 " <S-TAB> completion back. 
 inoremap <expr><S-TAB>  pumvisible() ? '<C-p>' : '<C-h>'
 " global settings
-call ddc#custom#patch_global('sources', ['vim-lsp','around','tmux', 'file'])
+call ddc#custom#patch_global('sources', ['skkeleton','vim-lsp','around','tmux', 'file'])
 " call ddc#custom#patch_global('sources', ['nvim-lsp','around','tmux', 'file'])
 call ddc#custom#patch_global('sourceOptions', {
     \ '_': {
     \       'matchers': ['matcher_head'],
     \       'sorters': ['sorter_rank'],
     \      },
+    \ 'skkeleton': {
+    \              'mark': 'skkeleton',
+    \              'matchers': ['skkeleton'],
+    \              'sorters': [],
+    \              },
     \ 'vim-lsp': {
     \       'matchers': ['matcher_head'],
     \       'mark': 'lsp',
     \       'forceCompletionPattern': "\\.|:\\s*|->",
-    \                },
+    \             },
     \ 'nvim-lsp': {
     \       'matchers': ['matcher_head'],
     \       'mark': 'n-lsp',
     \       'forceCompletionPattern': "\\.|:\\s*|->",
-    \                },
+    \             },
     \ 'file': {
     \       'mark': 'File',
     \       'isVolatile': v:true,
@@ -41,4 +46,3 @@ call ddc#custom#patch_global('sourceParams', {
   \})
 
 call ddc#enable()
-
