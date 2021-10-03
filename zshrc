@@ -32,7 +32,7 @@ alias ga='git add'
 alias gst='git status'
 alias gd='git diff'
 alias gcz='git cz c'
-
+alias cdw1='cd ~/Documents/workspace'
 
 #prompt
 # RPROMPT='%n@%m'
