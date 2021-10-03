@@ -1,5 +1,6 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+on_source = 'ddc.vim'
 hook_add = '''
     " 定義ジャンプ(デフォルトのctagsによるジャンプを上書きしているのでこのあたりは好みが別れます)
     nnoremap <C-]> :<C-u>LspDefinition<CR>
@@ -25,7 +26,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
+on_source = 'ddc.vim'
 
