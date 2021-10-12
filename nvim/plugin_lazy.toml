@@ -42,7 +42,8 @@ hook_add = '''
     let s:userpath = expand('~/.config/eskk/skk-jisyo.utf8')
     call skkeleton#config({
           \ 'globalJisyo': s:globalpath,
-          \ 'userJisyo': s:userpath, 
+          \ 'userJisyo': s:userpath,
+          \ 'eggLikeNewline': v:true,
           \})
     endfunction
     autocmd User skkeleton-initialize-pre call s:skkeleton_init()

@@ -43,8 +43,8 @@ repo = 'thinca/vim-quickrun'
 hook_add = '''
     let g:quickrun_config = {
         \ 'python': {
-        \   'command': 'python3'
-      \ },
+        \           'command': 'python3'
+        \ },
         \ '_' : {
             \ 'runner' : 'vimproc',
             \ 'runner/vimproc/updatetime' : 40,
@@ -72,3 +72,9 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'preservim/tagbar'
+hook_add = '''
+    nmap <Leader>t :TagbarToggle<CR>
+'''

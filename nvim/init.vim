@@ -58,7 +58,7 @@ set clipboard+=unnamedplus
 " add vim-plugin workspace
 set runtimepath^=~/Documents/workspace/myPrugins
 
-"Settings depends on filetypes
+" Settings depends on filetypes
 augroup vimrc
   autocmd!
   autocmd Filetype * call s:filetype(expand('<amatch>'))
@@ -70,7 +70,42 @@ function! s:filetype(ftype) abort
   endif
 endfunction
 
-" Typeset tex->pdf using texall.sh
+" Typeset tex->pdf using Makefile
 function! s:filetype_tex() abort
-  nnoremap <Leader>t :w<CR>:!./texall.sh<CR>
+  nnoremap <Leader>e :!make<CR>
 endfunction
+
+:command LatexTree call LatexTree() | lopen
+
+function! LatexTree()
+	let items = systemlist('grep -Hn section{ ./*.tex')
+	let nums = []
+	let filenames = []
+	let newItems = []	
+	let texts = []
+	for item in items
+		call add(nums, split(item, ":")[1])
+		let name = split(split(split(item, ":")[2], "{")[1], "}")[0]
+		if match(item, 'subsection') != -1
+			let name = "---" . name	
+		endif	
+			if match(item, 'subsubsection') != -1
+			let name = '---' . name
+		endif
+
+		call add(filenames, split(item, ":")[0])
+		call add(texts, name) 
+	endfor
+
+	let idx = 0
+
+	while idx < len(items)
+		call add(newItems, {'filename':filenames[idx], 'lnum':nums[idx], 'text':texts[idx]})
+		let idx+=1
+	endwhile
+
+	call setloclist(winnr(), [], 'r', {'items': newItems}) 
+
+endfunction
+
+" autocmd Bufwrite *.tex call timer_start(200, { tid -> execute('LatexTree')})
