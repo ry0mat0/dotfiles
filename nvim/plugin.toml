@@ -77,4 +77,6 @@ repo = 'vim-denops/denops.vim'
 repo = 'preservim/tagbar'
 hook_add = '''
     nmap <Leader>t :TagbarToggle<CR>
+    let g:tagbar_map_togglesort = "S"
+    let g:tagbar_width = 60
 '''
