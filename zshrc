@@ -47,8 +47,6 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias ad='terminal-share -service airdrop -video' #use AirDrop
 alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
 
-#use python installed by pyenv
-#export PYENV_ROOT="/usr/local/var/pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -path)"
+# use pyenv
 eval "$(pyenv init -)"
+
