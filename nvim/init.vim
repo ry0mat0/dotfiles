@@ -23,10 +23,6 @@ call dein#load_toml(s:toml_file, {'lazy':0})
 call dein#load_toml(s:lazy_file, {'lazy':1})
 call dein#load_toml(s:lsp_file, {'lazy':1})
 call dein#load_toml(s:ddc_file, {'lazy':1})
-call dein#add('cocopon/iceberg.vim')
-call dein#add('aereal/vim-colors-japanesque')
-call dein#add('arcticicestudio/nord-vim')
-call dein#add('tyrannicaltoucan/vim-quantum')
 call dein#end()
 
 filetype plugin indent on
@@ -70,7 +66,7 @@ function! s:filetype(ftype) abort
   endif
 endfunction
 
-" Typeset tex->pdf using Makefile
+" Typeset tex->pdf using Makefile (overwrite quickrun)
 function! s:filetype_tex() abort
   nnoremap <Leader>e :!make<CR>
 endfunction

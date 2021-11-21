@@ -17,3 +17,6 @@ nnoremap k gk
 
 " quit with q
 nnoremap q :q
+
+" unset highlight with esc
+nmap <Esc><Esc> :nohlsearch<CR><Esc>

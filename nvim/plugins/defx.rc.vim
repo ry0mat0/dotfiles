@@ -2,7 +2,8 @@ nnoremap <silent> <Leader>f :<C-u> Defx -listed -resume
 \ -columns=indent:mark:icons:git:filename:time:size
 \ -buffer-name=tab`tabpagenr()`<CR>
 
-nnoremap <silent> <Leader>w :<C-u> Defx -auto-cd
+" nnoremap <silent> <Leader>w :<C-u> Defx -auto-cd
+nnoremap  <Leader>w :<C-u> Defx -auto-cd
 \ <CR>
 
 autocmd FileType defx call s:defx_my_settings()
@@ -25,7 +26,8 @@ nnoremap <buffer><expr> w1
 \ defx#do_action('cd', s:work_dir)
 
 " change vim directory
-nnoremap <silent><buffer><expr> cd
+" nnoremap <silent><buffer><expr> cd
+nnoremap <buffer><expr> cd
 \ defx#do_action('change_vim_cwd')
 
 " execute file
