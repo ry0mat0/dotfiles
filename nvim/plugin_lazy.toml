@@ -8,6 +8,10 @@ repo = 'kat0h/bufpreview.vim'
 on_ft = 'markdown'
 
 [[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+
+[[plugins]]
 repo = 'vim-skk/denops-skkeleton.vim'
 on_event = 'InsertEnter'
 hook_add = '''
