@@ -1,5 +1,5 @@
 # Created by newuser for 5.8
-echo "~/.zshrc is loaded"
+# echo "~/.zshrc is loaded"
 
 autoload -Uz colors
 colors
