@@ -34,6 +34,9 @@ repo = 'tomtom/tcomment_vim'
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
+repo = 'arcticicestudio/nord-vim'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
     let g:lightline = { 'colorscheme': 'wombat' }

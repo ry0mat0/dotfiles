@@ -37,7 +37,8 @@ endif
 source ~/dotfiles/nvim/map.rc.vim
 
 " Color
-colorscheme iceberg
+" colorscheme iceberg
+colorscheme nord
 
 " Set line number
 set number
