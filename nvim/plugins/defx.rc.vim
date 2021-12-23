@@ -20,10 +20,9 @@ nnoremap <silent><buffer><expr> h
 nnoremap <silent><buffer><expr> ~
 \ defx#do_action('cd')
 
-" move to workspace1
-let s:work_dir = '/Users/rmat/Documents'
+" move to workspace
 nnoremap <buffer><expr> w1
-\ defx#do_action('cd', s:work_dir)
+\ defx#do_action('cd', ['/Users/mat/Documents'])
 
 " change vim directory
 " nnoremap <silent><buffer><expr> cd
