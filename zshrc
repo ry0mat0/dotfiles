@@ -23,8 +23,9 @@ precmd () { vcs_info }
 
 #alias
 alias ls='ls -GF'
-alias ll='ls -la'
+alias ll='ls -lh'
 alias la='ls -a'
+alias lla='ls -lha'
 alias vi='nvim'
 alias gls='alias | grep git'
 alias g='git'
