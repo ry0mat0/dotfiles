@@ -86,3 +86,10 @@ hook_add = '''
     let g:tagbar_map_togglesort = "S"
     let g:tagbar_width = 60
 '''
+
+[[plugins]]
+repo = 'eiji03aero/quick-notes'
+hook_add = '''
+    let g:quick_notes_directory = '~/.cache/quick-notes/'
+    let g:quick_notes_suffix = 'md'
+'''
