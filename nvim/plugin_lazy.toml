@@ -30,36 +30,6 @@ hook_add = '''
     autocmd User skkeleton-initialize-pre call s:skkeleton_init()
 '''
 
-# ddc related plugins
-# [[plugins]]
-# repo = 'Shougo/ddc.vim'
-# on_event = 'InsertEnter'
-# hook_source = '''
-#   source ~/dotfiles/nvim/plugins/ddc.rc.vim
-# '''
-#
-# # ddc-sources
-# [[plugins]]
-# repo = 'Shougo/ddc-around'
-# on_source = 'ddc.vim'
-#
-# [[plugins]]
-# repo = 'delphinus/ddc-tmux'
-# on_source = 'ddc.vim'
-#
-# [[plugins]]
-# repo = 'LumaKernel/ddc-file'
-# on_source = 'ddc.vim'
-#
-# # ddc-filters
-# [[plugins]]
-# repo = 'Shougo/ddc-matcher_head'
-# on_source = 'ddc.vim'
-#
-# [[plugins]]
-# repo = 'Shougo/ddc-sorter_rank'
-# on_source = 'ddc.vim'
-#
 # # nvim-lsp
 # [[plugins]]
 # repo = 'Shougo/ddc-nvim-lsp'
