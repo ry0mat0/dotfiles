@@ -54,23 +54,10 @@ set shiftwidth=2
 set clipboard+=unnamedplus
 " add vim-plugin workspace
 set runtimepath^=~/Documents/workspace/myPrugins
+" autocmd Bufwrite *.tex call timer_start(200, { tid -> execute('LatexTree')})
 
-" Settings depends on filetypes
-augroup vimrc
-  autocmd!
-  autocmd Filetype * call s:filetype(expand('<amatch>'))
-augroup END
-
-function! s:filetype(ftype) abort
-  if !empty(a:ftype) && exists('*' . 's:filetype_' . a:ftype)
-    execute 'call s:filetype_' . a:ftype . '()'
-  endif
-endfunction
-
-" Typeset tex->pdf using Makefile (overwrite quickrun)
-function! s:filetype_tex() abort
-  nnoremap <Leader>e :!make<CR>
-endfunction
+" settings depend on filetype
+source ~/dotfiles/nvim/filetype.rc.vim
 
 :command LatexTree call LatexTree() | lopen
 
@@ -104,5 +91,3 @@ function! LatexTree()
 	call setloclist(winnr(), [], 'r', {'items': newItems}) 
 
 endfunction
-
-" autocmd Bufwrite *.tex call timer_start(200, { tid -> execute('LatexTree')})
