@@ -54,11 +54,11 @@ set shiftwidth=2
 set clipboard+=unnamedplus
 " add vim-plugin workspace
 set runtimepath^=~/Documents/workspace/myPrugins
-" autocmd Bufwrite *.tex call timer_start(200, { tid -> execute('LatexTree')})
 
 " settings depend on filetype
 source ~/dotfiles/nvim/filetype.rc.vim
 
+" autocmd Bufwrite *.tex call timer_start(200, { tid -> execute('LatexTree')})
 :command LatexTree call LatexTree() | lopen
 
 function! LatexTree()
