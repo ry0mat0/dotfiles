@@ -1,10 +1,11 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 # on_source = 'ddc.vim'
-on_event = 'InsertEnter'
+# on_event = 'InsertEnter'
 hook_add = '''
-    " 定義ジャンプ(デフォルトのctagsによるジャンプを上書きしているのでこのあたりは好みが別れます)
-    nnoremap <C-]> :<C-u>LspDefinition<CR>
+    " 定義ジャンプ
+    " nnoremap <C-]> :<C-u>LspDefinition<CR>
+    nnoremap <LocalLeader>d :<C-u>LspDefinition<CR>
     " 定義情報のホバー表示
     nnoremap K :<C-u>LspHover<CR>
     " 名前変更
@@ -16,7 +17,7 @@ hook_add = '''
     " テキスト整形
     nnoremap <LocalLeader>s :<C-u>LspDocumentFormat<CR>
     " オムニ補完を利用する場合、定義の追加
-    set omnifunc=lsp#complete
+    " set omnifunc=lsp#complete
 
     let g:lsp_diagnostics_enabled = 1
     let g:lsp_diagnostics_signs_enabled = 1
@@ -27,10 +28,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
-on_event = 'InsertEnter'
-on_source = 'ddc.vim'
+# on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
-on_source = 'ddc.vim'
+# on_source = 'ddc.vim'
 

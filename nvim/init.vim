@@ -16,12 +16,12 @@ endif
 execute 'set runtimepath^=' . s:dein_repo_dir
 call dein#begin(s:dein_dir)
 let s:toml_file = expand(s:toml_dir . '/plugin.toml')
-let s:lazy_file = expand(s:toml_dir . '/plugin_lazy.toml')
 let s:lsp_file = expand(s:toml_dir . '/lsp.toml')
+let s:lazy_file = expand(s:toml_dir . '/plugin_lazy.toml')
 let s:ddc_file = expand(s:toml_dir . '/ddc.toml')
 call dein#load_toml(s:toml_file, {'lazy':0})
+call dein#load_toml(s:lsp_file, {'lazy':0})
 call dein#load_toml(s:lazy_file, {'lazy':1})
-call dein#load_toml(s:lsp_file, {'lazy':1})
 call dein#load_toml(s:ddc_file, {'lazy':1})
 call dein#end()
 
