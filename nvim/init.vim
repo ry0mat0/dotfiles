@@ -42,6 +42,8 @@ colorscheme nord
 
 " Set line number
 set number
+" highligh line number on cursor
+set cursorline
 " set tab visible
 set list listchars=tab:\▸\-
 " set tab to space
