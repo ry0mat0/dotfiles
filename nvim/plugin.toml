@@ -7,10 +7,16 @@ hook_add = '''
     source ~/dotfiles/nvim/plugins/denite.rc.vim
 '''
 
+# [[plugins]]
+# repo = 'Shougo/defx.nvim'
+# hook_add = '''
+#     source ~/dotfiles/nvim/plugins/defx.rc.vim
+# '''
+
 [[plugins]]
-repo = 'Shougo/defx.nvim'
+repo = 'lambdalisue/fern.vim'
 hook_add = '''
-    source ~/dotfiles/nvim/plugins/defx.rc.vim
+    nnoremap  <silent> <Leader>f :<C-u> Fern .<CR>
 '''
 
 [[plugins]]
@@ -21,6 +27,9 @@ repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
 repo = 'arcticicestudio/nord-vim'
+
+[[plugins]]
+repo = 'aereal/vim-colors-japanesque'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
