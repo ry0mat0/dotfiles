@@ -2,6 +2,7 @@
 let mapleader = "\<Space>"
 let localleader = '\'
 
+" if has('nvim')
 "START dein Scripts--------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -33,16 +34,16 @@ if dein#check_install()
 endif
 " END dein Scripts ----------------------
 
+set termguicolors
+colorscheme iceberg
+" endif
+
 " maps
 source ~/dotfiles/nvim/map.rc.vim
 
-" Color
-" colorscheme iceberg
-colorscheme nord
-
 " Set line number
 set number
-" highligh line number on cursor
+" highlight line number on cursor
 set cursorline
 " set tab visible
 set list listchars=tab:\▸\-
