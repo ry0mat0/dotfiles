@@ -52,7 +52,7 @@ elif [[ $ARCH == x86_64 ]]; then
 fi
 alias ad='terminal-share -service airdrop -video' #use AirDrop
 alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
-
+alias o='open'
 # use pyenv
 eval "$(pyenv init -)"
 
