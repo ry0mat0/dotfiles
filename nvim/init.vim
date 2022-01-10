@@ -54,7 +54,7 @@ set tabstop=2
 " tab width
 set shiftwidth=2
 " yank to clipboard
-set clipboard+=unnamedplus
+set clipboard+=unnamed
 " add vim-plugin workspace
 set runtimepath^=~/Documents/workspace/myPrugins
 
