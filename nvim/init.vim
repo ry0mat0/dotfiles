@@ -35,7 +35,7 @@ endif
 " END dein Scripts ----------------------
 
 set termguicolors
-colorscheme iceberg
+colorscheme nord
 " endif
 
 " maps
