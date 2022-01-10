@@ -16,7 +16,7 @@ hook_add = '''
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
-    nnoremap  <silent> <Leader>f :<C-u> Fern .<CR>
+      source ~/dotfiles/nvim/plugins/fern.rc.vim
 '''
 
 [[plugins]]
