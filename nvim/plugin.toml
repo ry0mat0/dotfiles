@@ -13,6 +13,14 @@ hook_add = '''
 #     source ~/dotfiles/nvim/plugins/defx.rc.vim
 # '''
 
+# [[plugins]]
+# repo = 'Shougo/ddu.vim'
+# hook_add = '''
+#       call ddu#custom#patch_global({
+#       \ 'ui': 'std',
+#       \})
+# '''
+
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
@@ -88,3 +96,6 @@ hook_add = '''
     let g:quick_notes_directory = '~/.cache/quick-notes/'
     let g:quick_notes_suffix = 'md'
 '''
+
+# [[plugins]]
+# repo = 'chrisbra/csv.vim'
