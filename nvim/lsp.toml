@@ -33,4 +33,3 @@ repo = 'mattn/vim-lsp-settings'
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
 # on_source = 'ddc.vim'
-
