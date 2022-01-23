@@ -1,24 +1,16 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-    source ~/dotfiles/nvim/plugins/denite.rc.vim
-'''
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# hook_add = '''
+#     source ~/dotfiles/nvim/plugins/denite.rc.vim
+# '''
 
 # [[plugins]]
 # repo = 'Shougo/defx.nvim'
 # hook_add = '''
 #     source ~/dotfiles/nvim/plugins/defx.rc.vim
-# '''
-
-# [[plugins]]
-# repo = 'Shougo/ddu.vim'
-# hook_add = '''
-#       call ddu#custom#patch_global({
-#       \ 'ui': 'std',
-#       \})
 # '''
 
 [[plugins]]
@@ -43,8 +35,6 @@ repo = 'aereal/vim-colors-japanesque'
 repo = 'itchyny/lightline.vim'
 hook_add = '''
     let g:lightline = { 'colorscheme': 'wombat' }
-    set laststatus=2
-    " set noshowmode
 '''
 
 [[plugins]]
@@ -73,8 +63,8 @@ hook_add = '''
 repo= 'Shougo/vimproc.vim'
 build = 'make'
 
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
+# [[plugins]]
+# repo = 'kristijanhusak/defx-git'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
