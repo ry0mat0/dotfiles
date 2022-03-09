@@ -1,7 +1,7 @@
 " Tabs
 nmap te :tabedit
-nmap <S-Tab> :tabprev<CR>
-nmap <Tab> :tabnext<CR>
+" nmap <S-Tab> :tabprev<CR>
+" nmap <Tab> :tabnext<CR>
 
 " Split window
 nnoremap ss :split<Return><C-w>w

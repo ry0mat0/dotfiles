@@ -119,5 +119,5 @@ hook_add = '''
     let g:vsnip_filetypes.plaintex = ['tex']
 '''
 
-# [[plugins]]
-# repo = 'hrsh7th/vim-vsnip-integ'
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'

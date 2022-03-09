@@ -7,7 +7,6 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB>  pumvisible() ? '<C-p>' : '<C-h>'
 " global settings
 call ddc#custom#patch_global('sources', ['skkeleton','vim-lsp','around','tmux', 'file'])
-" call ddc#custom#patch_global('sources', ['nvim-lsp','around','tmux', 'file'])
 call ddc#custom#patch_global('sourceOptions', {
     \ '_': {
     \       'matchers': ['matcher_head'],
@@ -21,11 +20,6 @@ call ddc#custom#patch_global('sourceOptions', {
     \ 'vim-lsp': {
     \       'matchers': ['matcher_head'],
     \       'mark': 'lsp',
-    \       'forceCompletionPattern': "\\.|:\\s*|->",
-    \             },
-    \ 'nvim-lsp': {
-    \       'matchers': ['matcher_head'],
-    \       'mark': 'n-lsp',
     \       'forceCompletionPattern': "\\.|:\\s*|->",
     \             },
     \ 'file': {
