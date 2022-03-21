@@ -1,0 +1,16 @@
+[[plugins]]
+repo = 'Shougo/ddu.vim'
+hook_add = '''
+    source ~/dotfiles/nvim/plugins/ddu.rc.vim
+'''
+[[plugins]]
+repo = 'Shougo/ddu-ui-ff'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-file_rec'
+
+[[plugins]]
+repo = 'Shougo/ddu-filter-matcher_substring'
+
+[[plugins]]
+repo = 'Shougo/ddu-kind-file'
