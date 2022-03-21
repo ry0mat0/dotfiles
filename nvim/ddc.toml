@@ -28,25 +28,3 @@ on_source = 'ddc.vim'
 repo = 'Shougo/ddc-sorter_rank'
 on_source = 'ddc.vim'
 
-# nvim-lsp
-# [[plugins]]
-# repo = 'Shougo/ddc-nvim-lsp'
-# on_source = 'ddc.vim'
-#
-# [[plugins]]
-# repo = 'matsui54/ddc-nvim-lsp-doc'
-# on_source = 'ddc.vim'
-# hook_source = '''
-#   let g:ddc_nvim_lsp_doc_config = {
-#         \ 'documentation': {
-#         \    'enable': v:true,
-#         \    'border': 'rounded',
-#         \    'maxWidth': 100,
-#         \    'winblend': 0,
-#         \ },
-#         \ 'signature': {
-#         \    'border': 'rounded',
-#         \ },
-#         \ }
-#   call ddc_nvim_lsp_doc#enable()
-# '''
