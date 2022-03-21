@@ -3,9 +3,18 @@
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
+# [[plugins]]
+# repo = 'kat0h/bufpreview.vim'
+# on_ft = 'markdown'
+
 [[plugins]]
-repo = 'kat0h/bufpreview.vim'
+repo = 'previm/previm'
 on_ft = 'markdown'
+hook_add = '''
+    let g:previm_open_cmd = 'open -a Safari'
+    let g:previm_enable_realtime = 1
+    let g:previm_show_header = 0
+'''
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'
