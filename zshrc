@@ -1,6 +1,15 @@
 # Created by newuser for 5.8
 # echo "~/.zshrc is loaded"
 
+HOSTNAME=$(hostname -s)
+if [[ $HOSTNAME == jikken2022-2 ]]; then
+  export http_proxy=http://133.63.21.99:8080
+  export https_proxy=$http_proxy
+  export HTTP_PROXY=$http_proxy
+  export HTTPS_PROXY=$http_proxy
+  export ALL_PROXY=$http_proxy
+fi
+
 autoload -Uz colors
 colors
 
@@ -44,11 +53,11 @@ PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}(%n@%m)
 #setting for OSX
 ARCH=$(uname -m)
 if [[ $ARCH == arm64 ]]; then
-    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 elif [[ $ARCH == x86_64 ]]; then
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 alias ad='terminal-share -service airdrop -video' #use AirDrop
 alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
