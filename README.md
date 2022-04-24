@@ -20,10 +20,6 @@
 これらのファイルは`init.vim`によって自動的に読みこまれるが下記のプラグインを動作させるには
 別途ファイルのリンクを貼る。
 
-### vim-vsnip
-`hrsh7th/vim-vsnip`のスニペット内容ファイル`dotfiles/vsnip`
-を`~/.config/vsnip`として配置する。
-
 ### skkeleton
 `vim-skk/denpos-skkeleton.vim`の辞書ファイルの置き場所として`~/.cache/skkeleton`を指定してあるので、
 `AquaSKK`の辞書ファイル`SKK-JISYO.L`と`skk-jisho.utf8`のリンクを貼る
