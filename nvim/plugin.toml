@@ -82,7 +82,7 @@ hook_add = '''
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
 hook_add = '''
-    let g:vsnip_snippet_dir = expand('~/.config/vsnip')
+    let g:vsnip_snippet_dir = expand('~/dotfiles/vsnip')
     " Expand
     " imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
     " smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
