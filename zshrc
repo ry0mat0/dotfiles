@@ -48,7 +48,7 @@ alias cdw1='cd ~/Documents/workspace'
 #prompt
 # RPROMPT='%n@%m'
 # RPROMPT='(%F{green}%~%f)'
-PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}(%n@%m)
+PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}(@%m)
 >'
 
 #setting for OSX
