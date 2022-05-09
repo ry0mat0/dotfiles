@@ -66,3 +66,7 @@ alias o='open'
 # use pyenv
 eval "$(pyenv init -)"
 
+fp() {
+  readlink -f $1 |pbcopy
+}
+
