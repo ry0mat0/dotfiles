@@ -57,7 +57,7 @@ if [[ "$(uname)" = Linux ]]; then
   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   fp() {
-    readlink -f $1 | xclip -selction c
+    readlink -f $1 | xclip -selection c
   }
   ct() {
     cat $1 | xclip -selection c
