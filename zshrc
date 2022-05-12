@@ -32,11 +32,12 @@ precmd () { vcs_info }
 # prompt adam2
 
 #alias
-alias ls='ls -GF'
+# alias ls='ls -GF'
+alias ls='ls --color=auto'  
 alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -lha'
- alias vi='vim'
+alias vi='vim'
 alias gls='alias | grep git'
 alias g='git'
 alias ga='git add'
@@ -54,6 +55,8 @@ PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}(@%m)
 #settings depend os OS
 if [[ "$(uname)" = Linux ]]; then
   #setting for Ubuntu
+  export LSCOLORS=exfxcxdxbxegedabagacad
+  export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
   source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   fp() {
@@ -61,7 +64,7 @@ if [[ "$(uname)" = Linux ]]; then
   }
   ct() {
     cat $1 | xclip -selection c
-  } 
+  }
 elif [[ "$(uname)" = Darwin ]]; then
   #setting for OSX
   ARCH=$(uname -m)
