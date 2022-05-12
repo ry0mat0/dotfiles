@@ -36,7 +36,7 @@ alias ls='ls -GF'
 alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -lha'
-# alias vi='nvim'
+ alias vi='vim'
 alias gls='alias | grep git'
 alias g='git'
 alias ga='git add'
@@ -51,22 +51,33 @@ alias cdw1='cd ~/Documents/workspace'
 PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}(@%m)
 >'
 
-#setting for OSX
-ARCH=$(uname -m)
-if [[ $ARCH == arm64 ]]; then
-  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [[ $ARCH == x86_64 ]]; then
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#settings depend os OS
+if [[ "$(uname)" = Linux ]]; then
+  #setting for Ubuntu
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  fp() {
+    readlink -f $1 | xclip -selction c
+  }
+  ct() {
+    cat $1 | xclip -selection c
+  } 
+elif [[ "$(uname)" = Darwin ]]; then
+  #setting for OSX
+  ARCH=$(uname -m)
+  if [[ $ARCH == arm64 ]]; then
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  elif [[ $ARCH == x86_64 ]]; then
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  fi
+  alias ad='terminal-share -service airdrop -video' #use AirDrop
+  alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
+  alias o='open'
+  # use pyenv
+  eval "$(pyenv init -)"
+  fp() {
+    readlink -f $1 |pbcopy
+  }
 fi
-alias ad='terminal-share -service airdrop -video' #use AirDrop
-alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
-alias o='open'
-# use pyenv
-eval "$(pyenv init -)"
-
-fp() {
-  readlink -f $1 |pbcopy
-}
-
