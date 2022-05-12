@@ -59,6 +59,7 @@ set shiftwidth=2
 set clipboard+=unnamed
 " add vim-plugin workspace
 set runtimepath^=~/Documents/workspace/myPrugins
+set backspace=indent,eol,start
 
 " settings depend on filetype
 source ~/dotfiles/nvim/filetype.rc.vim
