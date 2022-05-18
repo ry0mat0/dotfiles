@@ -1,4 +1,7 @@
 " Settings depends on filetypes
+" Define filetype 'gnuplot'
+autocmd BufNewFile,BufRead *.plt setfiletype gnuplot
+
 augroup vimrc
   autocmd!
   autocmd Filetype * call s:filetype(expand('<amatch>'))
@@ -14,4 +17,3 @@ endfunction
 function! s:filetype_tex() abort
   nnoremap <Leader>e :!make<CR>
 endfunction
-
