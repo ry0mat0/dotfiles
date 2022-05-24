@@ -85,3 +85,6 @@ elif [[ "$(uname)" = Darwin ]]; then
     readlink -f $1 |pbcopy
   }
 fi
+
+#load local zsh configuration
+source ~/.local.zsh
