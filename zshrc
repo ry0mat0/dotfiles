@@ -59,13 +59,8 @@ if [[ "$(uname)" = Linux ]]; then
 elif [[ "$(uname)" = Darwin ]]; then
   #setting for OSX
   ARCH=$(uname -m)
-  if [[ $ARCH == arm64 ]]; then
-    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  elif [[ $ARCH == x86_64 ]]; then
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  fi
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   alias ad='terminal-share -service airdrop -video' #use AirDrop
   alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
   alias o='open'
