@@ -1,16 +1,6 @@
 # Created by newuser for 5.8
 # echo "~/.zshrc is loaded"
 
-HOSTNAME=$(hostname -s)
-# if [[ $HOSTNAME == jikken2022-2 ]]; then
-if [ `echo $HOSTNAME | grep 'jikken2022'` ]; then
-  export http_proxy=http://133.63.21.99:8080
-  export https_proxy=$http_proxy
-  export HTTP_PROXY=$http_proxy
-  export HTTPS_PROXY=$http_proxy
-  export ALL_PROXY=$http_proxy
-fi
-
 autoload -Uz colors
 colors
 
