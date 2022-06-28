@@ -66,8 +66,13 @@ elif [[ "$(uname)" = Darwin ]]; then
   alias o='open'
   # use pyenv
   eval "$(pyenv init -)"
+  # use zoxide
+  eval "$(zoxide init zsh)"
   fp() {
     readlink -f $1 |pbcopy
+  }
+  ct() {
+    cat $1 | pbcopy
   }
 fi
 
