@@ -65,12 +65,17 @@ elif [[ "$(uname)" = Darwin ]]; then
   alias ad='terminal-share -service airdrop -video' #use AirDrop
   alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
   alias o='open'
+  alias vi='/usr/local/bin/vim'
   # use pyenv
   eval "$(pyenv init -)"
   # use zoxide
   eval "$(zoxide init zsh)"
   fp() {
-    readlink -f $1 |pbcopy
+        readlink -f $1 |pbcopy
+  }
+  fl() {
+       fullpath=$(readlink -f $1)
+       echo "[$1](file://${fullpath})" | pbcopy
   }
   ct() {
     cat $1 | pbcopy
