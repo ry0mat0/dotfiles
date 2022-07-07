@@ -35,7 +35,6 @@ alias gst='git status'
 alias gd='git diff'
 alias gp='git push'
 alias gcz='git cz c'
-alias cdw1='cd ~/Documents/workspace'
 
 #prompt
 # RPROMPT='%n@%m'
