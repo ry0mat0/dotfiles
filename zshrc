@@ -65,8 +65,6 @@ elif [[ "$(uname)" = Darwin ]]; then
   alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
   alias o='open'
   alias vi='/usr/local/bin/vim'
-  # use pyenv
-  eval "$(pyenv init -)"
   # use zoxide
   eval "$(zoxide init zsh)"
   fp() {
