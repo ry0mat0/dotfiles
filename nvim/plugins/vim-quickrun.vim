@@ -2,6 +2,10 @@ let g:quickrun_config = {
       \ 'python': {
         \           'command': 'python3'
         \ },
+        \ 'gnuplot': {
+        \           'type': 'gnuplot',
+        \           'command': 'makeplt',
+        \ },
         \ '_' : {
           \ 'runner' : 'vimproc',
           \ 'runner/vimproc/updatetime' : 40,

@@ -17,3 +17,7 @@ endfunction
 function! s:filetype_tex() abort
   nnoremap <Leader>e :!make<CR>
 endfunction
+
+" function! s:filetype_gnuplot() abort
+  " nnoremap <Leader>e :terminal ++close gnuplot
+" endfunction
