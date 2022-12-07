@@ -1,0 +1,10 @@
+{
+  "function": {
+    "prefix":["func"],
+    "body": [
+      "func $1() {",
+      "}"
+    ],
+    "description":"insert function"
+  }
+}
