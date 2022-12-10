@@ -6,6 +6,7 @@ inoremap <silent><expr> <TAB>
 " <S-TAB> completion back. 
 inoremap <expr><S-TAB>  pumvisible() ? '<C-p>' : '<C-h>'
 " global settings
+call ddc#custom#patch_global('ui', 'native')
 call ddc#custom#patch_global('sources', ['skkeleton','vim-lsp','around','tmux', 'file'])
 call ddc#custom#patch_global('sourceOptions', {
     \ '_': {

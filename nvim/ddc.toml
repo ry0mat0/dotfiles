@@ -6,6 +6,11 @@ hook_source = '''
   source ~/dotfiles/nvim/plugins/ddc.rc.vim
 '''
 
+# ddc-ui
+[[plugins]]
+repo = 'Shougo/ddc-ui-native'
+on_source = 'ddc.vim'
+
 # ddc-sources
 [[plugins]]
 repo = 'Shougo/ddc-around'
