@@ -1,0 +1,10 @@
+escape ^Tt
+altscreen on
+
+hardstatus alwayslastline "%{= cd} %-w%{= wk} %n %t* %{-}%+w %= LoadAVG [%l] "
+
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+
