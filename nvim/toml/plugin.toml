@@ -20,6 +20,9 @@ repo = 'arcticicestudio/nord-vim'
 repo = 'aereal/vim-colors-japanesque'
 
 [[plugins]]
+repo = 'sainnhe/everforest'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
     set laststatus=2
