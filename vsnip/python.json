@@ -1,0 +1,18 @@
+{
+  "def": {
+    "prefix":["def"],
+    "body": [
+      "def $1():",
+      "    return"
+    ],
+    "description":"insert function"
+  },
+  "main": {
+    "prefix":["main"],
+    "body": [
+      "if __name__ == '__main__':",
+      "    main()"
+    ],
+    "description":"insert __main__"
+  }
+}
