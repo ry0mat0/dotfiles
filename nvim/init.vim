@@ -60,7 +60,8 @@ set clipboard+=unnamed
 " add vim-plugin workspace
 set runtimepath^=~/Documents/workspace/myPrugins
 set backspace=indent,eol,start
-
+" open QuickFix automatically on grep commands
+autocmd QuickFixCmdPost *grep* cwindow
 " settings depend on filetype
 source ~/dotfiles/nvim/filetype.rc.vim
 
