@@ -36,6 +36,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'thinca/vim-qfhl'
+
+[[plugins]]
 repo= 'Shougo/vimproc.vim'
 build = 'make'
 
