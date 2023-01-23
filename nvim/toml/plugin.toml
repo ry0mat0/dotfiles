@@ -23,6 +23,9 @@ repo = 'aereal/vim-colors-japanesque'
 repo = 'sainnhe/everforest'
 
 [[plugins]]
+repo = 'joshdick/onedark.vim'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
     set laststatus=2
