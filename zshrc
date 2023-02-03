@@ -89,5 +89,8 @@ function mkcd {
   fi
 }
 
+#use thefuck command
+eval $(thefuck --alias)
+
 #load local zsh configuration
 source ~/.local.zsh
