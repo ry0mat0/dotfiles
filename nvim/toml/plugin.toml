@@ -80,3 +80,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip-integ'
+
+[[plugins]]
+repo = 'skanehira/denops-translate.vim'
