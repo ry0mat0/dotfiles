@@ -43,6 +43,12 @@ colorscheme japanesque
 " maps
 source ~/dotfiles/nvim/map.rc.vim
 
+" Set statusline
+set statusline=%f%m%r%h%w%q
+set statusline+=\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]
+set statusline+=\ %=
+set statusline+=%{tagbar#currenttag('[%s]','')}[CODE=0x%02B]\ [POS=%l/%L(%02v)]
+set laststatus=2
 " Set line number
 set number
 " highlight line number on cursor
