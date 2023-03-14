@@ -70,6 +70,8 @@ set backspace=indent,eol,start
 autocmd QuickFixCmdPost *grep* cwindow
 " settings depend on filetype
 source ~/dotfiles/nvim/filetype.rc.vim
+" show fullpath of current file
+:command Fp echo expand("%:p")
 
 " autocmd Bufwrite *.tex call timer_start(200, { tid -> execute('LatexTree')})
 :command LatexTree call LatexTree() | lopen
