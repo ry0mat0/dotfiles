@@ -37,7 +37,7 @@ endif
 " END dein Scripts ----------------------
 
 set termguicolors
-colorscheme japanesque
+colorscheme nordfox
 " endif
 
 " maps
