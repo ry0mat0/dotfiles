@@ -64,7 +64,7 @@ elif [[ "$(uname)" = Darwin ]]; then
   alias ad='terminal-share -service airdrop -video' #use AirDrop
   alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
   alias o='open'
-  alias vi='/usr/local/bin/vim'
+  # alias vi='/usr/local/bin/vim'
   # use zoxide
   eval "$(zoxide init zsh)"
   fp() {
