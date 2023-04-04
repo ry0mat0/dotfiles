@@ -25,6 +25,7 @@
       "import plot_jt60u.read_file as rf",
       "import plot_jt60u.calc_xprobe as cx",
       "import plot_jt60u.read_raw as rr",
+      "import plot_jt60u.shot_list as sl",
     ],
     "description":"import plot_jt60u packages"
   }
