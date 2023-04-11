@@ -35,5 +35,17 @@
       "import plot_jt60u.fit_raw as fl"
     ],
     "description": "import plot_jt60u packages"
+  },
+  "matplotlib": {
+    "prefix": [
+      "mpl"
+    ],
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "",
+      "plt.rcParams['xtick.direction'] = 'in'",
+      "plt.rcParams['ytick.direction'] = 'in'"
+    ],
+    "description": "import matplotlib and default settings"
   }
 }
