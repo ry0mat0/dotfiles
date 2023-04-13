@@ -13,9 +13,11 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
+config.use_ime = true
 config.color_scheme = 'iceberg-dark'
 config.font = wezterm.font('HackGen Console NF')
 config.font_size = 14.0
+config.audible_bell = 'Disabled'
 
 -- and finally, return the configuration to wezterm
 return config
