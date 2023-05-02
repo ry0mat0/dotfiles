@@ -15,8 +15,7 @@
     ],
     "body": [
       "def main():",
-      "    print('template')",
-      "",
+      "    $1",
       "",
       "if __name__ == '__main__':",
       "    main()"
@@ -47,5 +46,13 @@
       "plt.rcParams['ytick.direction'] = 'in'"
     ],
     "description": "import matplotlib and default settings"
+  },
+  "latex-style": {
+    "prefix": [
+      "tex"
+    ],
+    "body": [
+      "r'\$\$'"
+    ]
   }
 }
