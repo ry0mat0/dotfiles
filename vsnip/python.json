@@ -29,9 +29,11 @@
     "body": [
       "import plot_jt60u.read_file as rf",
       "import plot_jt60u.calc_xprobe as cx",
+      "import plot_jt60u.calc_eq as ce",
       "import plot_jt60u.read_raw as rr",
       "import plot_jt60u.shot_list as sl",
-      "import plot_jt60u.fit_raw as fl"
+      "import plot_jt60u.fit_raw as fl",
+      "import plot_jt60u.fitfunc as ff"
     ],
     "description": "import plot_jt60u packages"
   },
