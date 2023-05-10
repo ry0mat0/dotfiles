@@ -33,7 +33,8 @@
       "import plot_jt60u.read_raw as rr",
       "import plot_jt60u.shot_list as sl",
       "import plot_jt60u.fit_raw as fl",
-      "import plot_jt60u.fitfunc as ff"
+      "import plot_jt60u.fitfunc as ff",
+      "import plot_jt60u.editfigure as ef"
     ],
     "description": "import plot_jt60u packages"
   },
