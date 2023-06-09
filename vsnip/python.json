@@ -50,6 +50,15 @@
     ],
     "description": "import matplotlib and default settings"
   },
+  "add_currentfilepath": {
+    "prefix": [
+      "acfp"
+    ],
+    "body": [
+      "ef.add_currentfilepath($1, $2, $3, __file__)"
+    ],
+    "description": "editfigure.add_currentfilepath()"
+  },
   "latex-style": {
     "prefix": [
       "tex"
