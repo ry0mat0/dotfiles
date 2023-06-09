@@ -41,8 +41,8 @@ hook_add = '''
       source ~/dotfiles/nvim/plugins/vim-quickrun.vim
 '''
 
-[[plugins]]
-repo = 'thinca/vim-qfhl'
+# [[plugins]]
+# repo = 'thinca/vim-qfhl'
 
 [[plugins]]
 repo= 'Shougo/vimproc.vim'
