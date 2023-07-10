@@ -48,7 +48,8 @@
       "import matplotlib.pyplot as plt",
       "",
       "plt.rcParams['xtick.direction'] = 'in'",
-      "plt.rcParams['ytick.direction'] = 'in'"
+      "plt.rcParams['ytick.direction'] = 'in'",
+      "plt.rcParams['axes.grid'] = 'True'"
     ],
     "description": "import matplotlib and default settings"
   },
