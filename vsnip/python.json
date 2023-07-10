@@ -14,7 +14,7 @@
       "main"
     ],
     "body": [
-      "def main():",
+      "def main() ->None:",
       "    $1",
       "",
       "if __name__ == '__main__':",
