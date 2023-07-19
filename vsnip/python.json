@@ -34,7 +34,7 @@
       "import plot_jt60u.calc_bolometer as cb",
       "import plot_jt60u.read_raw as rr",
       "import plot_jt60u.shot_list as sl",
-      "import plot_jt60u.fit_raw as fl",
+      "import plot_jt60u.fit_raw as fr",
       "import plot_jt60u.fitfunc as ff",
       "import plot_jt60u.editfigure as ef"
     ],
