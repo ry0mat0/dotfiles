@@ -2,7 +2,7 @@
 nmap te :tabedit
 " nmap <S-Tab> :tabprev<CR>
 " nmap <Tab> :tabnext<CR>
-
+map <C-z> <Nop>
 " Split window
 nnoremap ss :split<Return><C-w>w
 nnoremap sv :vsplit<Return><C-w>w
