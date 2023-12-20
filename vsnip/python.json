@@ -46,10 +46,16 @@
     ],
     "body": [
       "import matplotlib.pyplot as plt",
+      "from cycler import cycler",
       "",
       "plt.rcParams['xtick.direction'] = 'in'",
       "plt.rcParams['ytick.direction'] = 'in'",
-      "plt.rcParams['axes.grid'] = 'True'"
+      "plt.rcParams['axes.grid'] = 'True'",
+      "plt.rcParams['font.size'] = 14",
+      "univ_cycle = cycler(color=['#FF4B00', '#005AFF',",
+      "             '#03AF7A', '#4DC4FF', '#F6AA00', '#FFF100', '#000000'])",
+      "plt.rcParams['axes.prop_cycle'] = univ_cycle",
+      "c_list = plt.rcParams['axes.prop_cycle'].by_key()['color']"
     ],
     "description": "import matplotlib and default settings"
   },
