@@ -16,9 +16,17 @@ end
 config.use_ime = true
 config.color_scheme = 'iceberg-dark'
 config.font = wezterm.font('HackGen Console NF')
-config.font_size = 14.0
+config.font_size = 15.0
 config.audible_bell = 'Disabled'
 
+config.keys = {
+  {
+    key = '0',
+    mods = 'CTRL',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+}
+-- config.disable_default_key_bindings = true
 -- and finally, return the configuration to wezterm
 return config
 
