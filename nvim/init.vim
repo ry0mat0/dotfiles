@@ -73,6 +73,9 @@ source ~/dotfiles/nvim/filetype.rc.vim
 " show fullpath of current file
 :command Fp echo expand("%:p")
 
+" use fzf
+set rtp+=/opt/homebrew/opt/fzf
+
 " autocmd Bufwrite *.tex call timer_start(200, { tid -> execute('LatexTree')})
 :command LatexTree call LatexTree() | lopen
 
