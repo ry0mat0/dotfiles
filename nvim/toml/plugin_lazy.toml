@@ -31,7 +31,7 @@ hook_add = '''
     let s:globalpath = expand('~/.cache/skkeleton/SKK-JISYO.L')
     let s:userpath = expand('~/.cache/skkeleton/skk-jisyo.utf8')
     call skkeleton#config({
-          \ 'globalJisyo': s:globalpath,
+          \ 'globalDictionaries': [s:globalpath],
           \ 'userDictionary': s:userpath,
           \ 'eggLikeNewline': v:true,
           \})
