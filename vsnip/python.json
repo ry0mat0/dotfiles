@@ -31,7 +31,7 @@
       "import plot_jt60u.calc_xprobe as cx",
       "import plot_jt60u.calc_eq as ce",
       "import plot_jt60u.calc_tprobe as ct",
-      "import plot_jt60u.calc_bolometer as cb",
+      "import plot_jt60u.calc_bolometer as cpb",
       "import plot_jt60u.read_raw as rr",
       "import plot_jt60u.shot_list as sl",
       "import plot_jt60u.fit_raw as fr",
@@ -39,6 +39,17 @@
       "import plot_jt60u.editfigure as ef"
     ],
     "description": "import plot_jt60u packages"
+  },
+  "sonic": {
+    "prefix": [
+      "sonic"
+    ],
+    "body": [
+      "import plot_sonic.read_sonic as rs",
+      "import plot_sonic.calc_power_balance as cb",
+      "from plot_sonic import calc_imp1d"
+    ],
+    "description": "import plot_sonic packages"
   },
   "matplotlib": {
     "prefix": [
@@ -52,8 +63,8 @@
       "plt.rcParams['ytick.direction'] = 'in'",
       "plt.rcParams['axes.grid'] = 'True'",
       "plt.rcParams['font.size'] = 14",
-      "univ_cycle = cycler(color=['#FF4B00', '#005AFF',",
-      "             '#03AF7A', '#4DC4FF', '#F6AA00', '#FFF100', '#000000'])",
+      "univ_cycle = cycler(color=['#FF4B00', '#005AFF', '#03AF7A',",
+      "                           '#4DC4FF', '#F6AA00', '#FFF100', '#000000'])",
       "plt.rcParams['axes.prop_cycle'] = univ_cycle",
       "c_list = plt.rcParams['axes.prop_cycle'].by_key()['color']"
     ],
@@ -73,7 +84,8 @@
       "savefig"
     ],
     "body": [
-      "fig.savefig($1, dpi=300, bbox_inches='tight', pad_inches=0.05)"
+      "fig.savefig($1,",
+      "             dpi=300, bbox_inches='tight', pad_inches=0.05)"
     ],
     "description": "save matplotlib.figure"
   },
