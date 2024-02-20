@@ -31,7 +31,7 @@
       "import plot_jt60u.calc_xprobe as cx",
       "import plot_jt60u.calc_eq as ce",
       "import plot_jt60u.calc_tprobe as ct",
-      "import plot_jt60u.calc_bolometer as cpb",
+      "import plot_jt60u.calc_bolometer as cbol",
       "import plot_jt60u.read_raw as rr",
       "import plot_jt60u.shot_list as sl",
       "import plot_jt60u.fit_raw as fr",
@@ -46,7 +46,7 @@
     ],
     "body": [
       "import plot_sonic.read_sonic as rs",
-      "import plot_sonic.calc_power_balance as cb",
+      "import plot_sonic.calc_power_balance as cpb",
       "from plot_sonic import calc_imp1d"
     ],
     "description": "import plot_sonic packages"
