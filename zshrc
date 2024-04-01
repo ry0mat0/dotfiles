@@ -35,6 +35,7 @@ alias gst='git status'
 alias gd='git diff'
 alias gp='git push'
 alias gcz='git cz c'
+alias cd='z'
 
 #prompt
 # RPROMPT='%n@%m'
