@@ -29,7 +29,6 @@ hook_add = '''
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 # on_source = 'ddc.vim'
-
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
 # on_source = 'ddc.vim'
