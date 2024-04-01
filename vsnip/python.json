@@ -47,7 +47,9 @@
     "body": [
       "import plot_sonic.read_sonic as rs",
       "import plot_sonic.calc_power_balance as cpb",
-      "from plot_sonic import calc_imp1d"
+      "import plot_sonic.calc_mcparm as cmc",
+      "from plot_sonic import calc_imp1d",
+      "import plot_sonic.rw_formatted_data as rw"
     ],
     "description": "import plot_sonic packages"
   },
