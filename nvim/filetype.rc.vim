@@ -14,6 +14,7 @@ function! s:filetype(ftype) abort
 endfunction
 
 " Typeset tex->pdf using Makefile (overwrite quickrun)
+let g:tex_flavor = 'latex'
 function! s:filetype_tex() abort
   nnoremap <Leader>e :!make<CR>
 endfunction
