@@ -26,3 +26,7 @@ endfunction
 function! s:filetype_plaintex() abort
   nnoremap <Leader>e :!make<CR>
 endfunction
+
+function! s:filetype_typst() abort
+  nnoremap <Leader>e :!make<CR>
+endfunction
