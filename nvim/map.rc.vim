@@ -14,6 +14,8 @@ nnoremap sl <C-w>l
 
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " unset highlight with esc
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
