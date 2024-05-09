@@ -2,7 +2,7 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'lambdalisue/fern.vim'
+repo = 'lambdalisue/vim-fern'
 hook_add = '''
       source ~/dotfiles/nvim/plugins/fern.rc.vim
 '''
