@@ -48,8 +48,8 @@ if [[ "$(uname)" = Linux ]]; then
   #setting for Ubuntu
   export LSCOLORS=exfxcxdxbxegedabagacad
   export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
   export PATH="$HOME/.local/bin:$PATH"
   fp() {
     readlink -f $1 | xclip -selection c
@@ -66,8 +66,6 @@ elif [[ "$(uname)" = Darwin ]]; then
   alias ql='qlmanage -p "$@" >&/dev/null' #use QuickLook
   alias o='open'
   # alias vi='/usr/local/bin/vim'
-  # use zoxide
-  eval "$(zoxide init zsh)"
   fp() {
         readlink -f $1 |pbcopy
   }
@@ -90,6 +88,8 @@ function mkcd {
   fi
 }
 
+# use zoxide
+eval "$(zoxide init zsh)"
 #use thefuck command
 eval $(thefuck --alias)
 
