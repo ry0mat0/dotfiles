@@ -70,9 +70,14 @@ set backspace=indent,eol,start
 autocmd QuickFixCmdPost *grep* cwindow
 " settings depend on filetype
 source ~/dotfiles/nvim/filetype.rc.vim
-" show fullpath of current file
-:command Fp echo expand("%:p")
-
+" copy fullpath of current file as markdown
+function s:copyFileAsMarkdown()
+  let fp = expand("%:p")
+  let fn = expand("%")
+  echo fp
+  let @+ = "[".fn."]"."(file://".fp.")"
+endfunction
+command Fp call s:copyFileAsMarkdown()
 " use fzf
 set rtp+=/opt/homebrew/opt/fzf
 
