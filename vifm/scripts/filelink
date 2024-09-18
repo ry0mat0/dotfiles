@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $# != 1 ] ; then
+  echo  'Expected one arguments'
+  exit 1
+fi
+fullpath=$(readlink -f $1)
+# echo ${fullpath}
+echo "[$1](file://${fullpath})" | pbcopy

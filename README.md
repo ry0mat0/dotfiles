@@ -23,3 +23,7 @@
 ### skkeleton
 `vim-skk/denpos-skkeleton.vim`の辞書ファイルの置き場所として`~/.cache/skkeleton`を指定してあるので、
 `AquaSKK`の辞書ファイル`SKK-JISYO.L`と`skk-jisho.utf8`のリンクを貼る
+
+### vifm
+`vifmrc`を`$VIFM/`下に配置する。(Macの場合`~/.config/vifm/`)
+`scripts`下のファイルを`$VIFM/scripts`下に配置する。
