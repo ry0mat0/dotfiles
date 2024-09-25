@@ -145,6 +145,7 @@ command! mkcd :mkdir %a | cd %a
 command! reload :write | restart full
 
 command! fl filelink %f
+command! open !open %d
 
 " ------------------------------------------------------------------------------
 " File types association
