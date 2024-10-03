@@ -77,7 +77,7 @@ function s:copyFileAsMarkdown()
   echo fp
   let @+ = "[".fn."]"."(file://".fp.")"
 endfunction
-command Fp call s:copyFileAsMarkdown()
+command Fl call s:copyFileAsMarkdown()
 " use fzf
 set rtp+=/opt/homebrew/opt/fzf
 
