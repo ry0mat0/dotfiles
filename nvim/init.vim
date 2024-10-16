@@ -40,6 +40,25 @@ set termguicolors
 colorscheme nordfox
 " endif
 
+" iceberg terminal colors
+let g:terminal_ansi_colors = [
+    \ '#000000',
+    \ '#da9290',
+    \ '#8cab90',
+    \ '#ebba91',
+    \ '#a1b7d9',
+    \ '#b8adde',
+    \ '#58c2c5',
+    \ '#c7c7c7',
+    \ '#676767',
+    \ '#ed766d',
+    \ '#8cf67a',
+    \ '#fefb7e',
+    \ '#6a71f6',
+    \ '#ed7ef8',
+    \ '#8ef9fd',
+    \ '#fefefe'
+    \ ]
 " maps
 source ~/dotfiles/nvim/map.rc.vim
 
