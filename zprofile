@@ -8,5 +8,8 @@ elif [[$ARCH == x86_64 ]]; then
     eval "$(pyenv init --path)"
 fi
 
+# set path for go
+export PATH="$HOME/go/bin:$PATH"
+
 export PYTHONPATH="$HOME/.cache/my_python_package"
 export PATH="$HOME/.local/apps:$PATH"
