@@ -15,8 +15,11 @@ call ddc#custom#patch_global('sourceOptions', {
     \      },
     \ 'skkeleton': {
     \              'mark': 'skkeleton',
-    \              'matchers': ['skkeleton'],
+    \              'matchers': [],
     \              'sorters': [],
+    \              'converters': [], 
+    \              'isVolatile': v:true,
+    \              'minAutoCompleteLength': 1,
     \              },
     \ 'vim-lsp': {
     \       'matchers': ['matcher_head'],
