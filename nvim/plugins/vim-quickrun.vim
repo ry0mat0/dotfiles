@@ -6,6 +6,10 @@ let g:quickrun_config = {
         \           'type': 'gnuplot',
         \           'command': 'makeplt',
         \ },
+        \ 'typst': {
+        \          'command': 'typst',
+        \          'cmdopt': 'compile',
+        \ },
         \ '_' : {
           \ 'runner' : 'vimproc',
           \ 'runner/vimproc/updatetime' : 40,
