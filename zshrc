@@ -43,6 +43,8 @@ alias cd='z'
 PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}(@%m)
 >'
 
+zstyle ':completion:*:default' menu select=1
+
 #settings depend os OS
 if [[ "$(uname)" = Linux ]]; then
   #setting for Ubuntu
