@@ -92,8 +92,6 @@ function mkcd {
 
 # use zoxide
 eval "$(zoxide init zsh)"
-#use thefuck command
-eval $(thefuck --alias)
 
 #load local zsh configuration
 source ~/.local.zsh
