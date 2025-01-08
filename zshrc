@@ -43,7 +43,13 @@ alias cd='z'
 PROMPT='(%F{green}%~%f)${vcs_info_msg_0_}(@%m)
 >'
 
-zstyle ':completion:*:default' menu select=1
+DIRSTACKSIZE=100
+setopt AUTO_PUSHD
+zstyle ':completion:*' menu select
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
+zstyle ':completion:*:descriptions' format '%BCompleting%b %U%d%u'
+# zstyle ':completion:*:default' menu select=1
+
 
 #settings depend os OS
 if [[ "$(uname)" = Linux ]]; then
