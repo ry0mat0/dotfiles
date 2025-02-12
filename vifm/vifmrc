@@ -451,3 +451,16 @@ nnoremap <c-u> <c-w>x
 " ------------------------------------------------------------------------------
 
 " https://github.com/cirala/vifm_devicons
+
+" =========
+" fzf連携
+" =========
+" 下記URLを参考
+" https://wiki.vifm.info/index.php/How_to_integrate_fzf_for_fuzzy_finding
+" https://wonderwall.hatenablog.com/entry/2017/10/06/063000
+command! FZFfind : set noquickview
+                \| let $FZF_PICK = term('find * -type f | fzf --height 10 2>/dev/tty')
+                \| if $FZF_PICK != ''
+                \|     execute 'goto' fnameescape($FZF_PICK)
+                \| endif
+
