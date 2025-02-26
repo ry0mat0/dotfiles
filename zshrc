@@ -96,6 +96,19 @@ function mkcd {
   fi
 }
 
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+ff() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type f -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
 # use zoxide
 eval "$(zoxide init zsh)"
 
